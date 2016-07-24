@@ -35,7 +35,7 @@ docs_require = [
 
 setup(
     name='pytest-rethinkdb',
-    version='0.1.0',
+    version='0.1.1',
     author='Sylvain Bellemare',
     author_email='sylvain@bigchaindb.com',
     maintainer='Sylvain Bellemare',
