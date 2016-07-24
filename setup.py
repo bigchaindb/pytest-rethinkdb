@@ -35,13 +35,13 @@ docs_require = [
 
 setup(
     name='pytest-rethinkdb',
-    version='0.1.0',
+    version='0.1.1',
     author='Sylvain Bellemare',
     author_email='sylvain@bigchaindb.com',
     maintainer='Sylvain Bellemare',
     maintainer_email='sylvain@bigchaindb.com',
     license='MIT',
-    url='https://github.com/sbellem/pytest-rethinkdb',
+    url='https://github.com/bigchaindb/pytest-rethinkdb',
     description='A RethinkDB plugin for pytest.',
     long_description=read('README.rst'),
     py_modules=['pytest_rethinkdb'],
