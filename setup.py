@@ -41,7 +41,7 @@ setup(
     maintainer='Sylvain Bellemare',
     maintainer_email='sylvain@bigchaindb.com',
     license='MIT',
-    url='https://github.com/sbellem/pytest-rethinkdb',
+    url='https://github.com/bigchaindb/pytest-rethinkdb',
     description='A RethinkDB plugin for pytest.',
     long_description=read('README.rst'),
     py_modules=['pytest_rethinkdb'],
