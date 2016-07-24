@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from os import environ
+
 import pytest
+
+import rethinkdb
 
 
 def pytest_addoption(parser):
@@ -19,3 +23,10 @@ def pytest_addoption(parser):
 @pytest.fixture
 def bar(request):
     return request.config.option.dest_foo
+
+
+@pytest.fixture
+def conn():
+    return rethinkdb.connect(
+        host=environ.get('RETHINKDB_DATABASE_HOST', 'localhost'),
+        port=environ.get('RETHINKDB_DATABASE_PORT', 28015))
