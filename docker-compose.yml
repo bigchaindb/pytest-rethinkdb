@@ -5,4 +5,12 @@ services:
     build:
       context: .
     volumes:
-      - .:/usr/src/app/
+      - ./docs:/usr/src/app/docs
+      - ./tests:/usr/src/app/tests
+      - ./pytest_rethinkdb.py:/usr/src/app/pytest_rethinkdb.py
+      - ./setup.py:/usr/src/app/setup.py
+  rdb:
+    image: rethinkdb
+    ports:
+      - "8080"
+      - "28015"

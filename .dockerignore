@@ -1,0 +1,8 @@
+.cache
+.eggs
+.git
+.ropeproject
+build
+dist
+pytest_rethinkdb.egg*
+*__pycache__

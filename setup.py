@@ -45,7 +45,7 @@ setup(
     description='A RethinkDB plugin for pytest.',
     long_description=read('README.rst'),
     py_modules=['pytest_rethinkdb'],
-    install_requires=['pytest>=2.9.1'],
+    install_requires=['pytest>=2.9.1', 'rethinkdb>=2.3.0'],
     tests_require=tests_require,
     setup_requires=['pytest-runner'],
     extras_require={

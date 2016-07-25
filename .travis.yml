@@ -1,21 +1,29 @@
-# Config file for automatic testing at travis-ci.org
-
-sudo: false
 language: python
 python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "pypy"
+  - '3.5'
 
-install:
-  - pip install tox
-  - "TOX_ENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}"
-script: tox -e $TOX_ENV
+env:
+  global:
+    - TEST_RETHINKDB_HOST=localhost
 
 before_cache:
   - rm -rf $HOME/.cache/pip/log
 cache:
   directories:
     - $HOME/.cache/pip
+
+before_install:
+  - source /etc/lsb-release
+  - echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee -a /etc/apt/sources.list.d/rethinkdb.list
+  - wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt-get install rethinkdb
+  - pip install -e .[test]
+  - pip install codecov
+
+before_script: rethinkdb --daemon
+script: py.test -v --cov
+
+after_success: codecov

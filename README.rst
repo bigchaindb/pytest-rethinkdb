@@ -1,9 +1,12 @@
 **warning**: Scaffolding only. Not Yet Implemented! 
 
-.. image:: https://travis-ci.org/sbellem/pytest-rethinkdb.svg?branch=master
-    :target: https://travis-ci.org/sbellem/pytest-rethinkdb
+.. image:: https://img.shields.io/pypi/v/pytest-rethinkdb.svg
+    :target: https://pypi.python.org/pypi/pytest-rethinkdb
+.. image:: https://img.shields.io/travis/bigchaindb/pytest-rethinkdb.svg
+    :target: https://travis-ci.org/bigchaindb/pytest-rethinkdb
     :alt: See Build Status on Travis CI
-
+.. image:: https://img.shields.io/codecov/c/github/bigchaindb/pytest-rethinkdb/master.svg
+    :target: https://codecov.io/github/bigchaindb/pytest-rethinkdb?branch=master
 
 pytest-rethinkdb
 ================
